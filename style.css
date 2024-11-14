@@ -1,0 +1,76 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+    /* 16px default font size */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* Set default font */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.s-sc1 {
+width: 125px;
+}
+
+.s-sc2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+}
+
+.nav_btn{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+
+#Overview{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
