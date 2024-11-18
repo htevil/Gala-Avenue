@@ -8,18 +8,17 @@
 
 html {
     font-size: 100%;
-    /* 16px default font size */
     scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
-    /* Set default font */
-    line-height: 1.6;
     color: #333;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 header,
@@ -34,15 +33,40 @@ section {
 
 footer {
     width: 100%;
+    padding: 25px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-img{
+img {
     width: 100%;
+}
+
+.heading {
+    font-size: 44px;
+    color: #A97A1F;
+}
+
+.para-heading {
+    font-size: 32px;
+    margin-bottom: 12.5px;
+    font-weight: 700;
+}
+
+.para {
+    font-size: 17.5px;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 12.5px;
 }
 
 nav {
     width: 100%;
-    max-width: 1320px;
+    max-width: 1400px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -50,7 +74,7 @@ nav {
 }
 
 .s-sc1 {
-width: 125px;
+    width: 120px;
 }
 
 .s-sc2 {
@@ -61,16 +85,355 @@ width: 125px;
     gap: 75px;
 }
 
-.nav_btn{
+.nav_btn {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     color: #333;
 }
 
-#Overview{
-    height: 100vh;
+/* Section 1 */
+#Overview {
+    padding: 50px 0px;
+}
+
+.s1-c {
+    width: 95%;
+    align-self: self-end;
+}
+
+.s1-sc1 {
+    margin-bottom: 12.5px;
+}
+
+.s1-sc2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.s1-ssc1 {
+    padding: 12.5px 0px;
+    width: 50%;
+}
+
+.s1-ssc2 {
+    width: 50%;
+    max-width: 720px;
+}
+
+.s1-sssc1 {
+    width: 70%;
+}
+
+
+/* Section2 */
+#Amenities{
+    padding: 50px 0px;
+    background-color: #FCF0D8;
+}
+
+.s2-c {
+    width: 95%;
+    align-self: self-end;
+    display: flex;
+    flex-direction: column;
+}
+
+.s2-ssc2{
+    width: 60%;
+}
+
+/*Section 3 */
+#Specifications{
+    padding: 50px 0px;
+}
+
+
+.s3-c1{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.s3-sc2{
+    gap: 0px;
+    margin-bottom: 25px;
+}
+
+.s3-c2{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+}
+
+#s31{
+    background: linear-gradient(to bottom, #fcd46a, #b17400);
+}
+
+.s3-ssc{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px;
+    background-color: #EEEEEE;
+}
+
+.s3-sssc{
+    width: 75px;
+}
+
+#s3-img2{
+    width: 50px;
+}
+
+h3{
+    font-size: 22px;
+}
+
+ul{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: justify;
+}
+
+/* Section 4 */
+#Floor-Plans{
+    padding: 50px 0px;
+}
+
+.s4-c1{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.s4-sc2{
+    gap: 0px;
+    margin-bottom: 25px;
+}
+
+.s4-c2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.s4-1sc{
+    display: flex;
+    gap: 0px;
+}
+
+.s4-btn{
+    width: 225px;
+    padding: 20px;
+    font-size: 24px;
+}
+
+#s4btn1{
+    background: linear-gradient(to bottom, #fcd46a, #b17400);
+    border: none;
+}
+
+#s4btn2{
+    background-color: transparent;
+    border: 1px #D8D9DA solid;
+}
+
+.s4-2sc{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.s4-ssc{
+    width: 100%;
+    padding: 25px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    background-color: #fff;
+}
+
+.s4-sssc{
+    font-size: 25px;
+    font-weight: 700;
+    padding: 12.5px;
+}
+
+/* section 5 */
+#Location-Map{
+    padding: 50px 0px;
+}
+
+.s5-c1{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.s5-sc2{
+    gap: 0px;
+    margin-bottom: 25px;
+}
+
+.s5-ssc1{
+    width: 40%;
+    margin-bottom: 0px;
+}
+
+.s5-c2{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.s5-s1c{
+    width: 80%;
+}
+
+
+.s5-s2c{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.s5-ss2c{
+    width: 90%;
     display: flex;
     align-items: center;
+    gap: 10px;
+    padding: 12.5px 25px;
+    background-color: #EEEEEE;
 }
+
+.s5-sss2c{
+    width: 45px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Section 6*/
+#About-Developer{
+    padding: 50px 0px;
+}
+
+.s6-c1{
+    width: 90%;
+    margin-bottom: 25px;
+}
+
+.s6-c2{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.s6-s1c{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12.5px;
+}
+
+.s6-ss1c{
+    width: 300px;
+}
+
+.s6-ss2c{
+    width: 25px;
+}
+
+.s6-s2c{
+    width: 70%;
+}
+
+/*Section 7*/
+#Enquire-Now{
+    padding: 100px;
+    background: linear-gradient(to bottom, #fcd46a, #b17400);
+    gap: 25px;
+    color: white;
+}
+
+.s7-c1{
+    color: white;
+}
+
+.s7-c2{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    gap: 25px
+}
+
+.s7-s2c1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12.5px;
+}
+
+input{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px white solid;
+}
+
+input::placeholder{
+    color: white;
+}
+
+.s2c2{
+    align-self: center;
+    width: 200px;
+    padding: 12.5px;
+    background-color: white;
+    border: none;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.s7-c4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.s7-s4c{
+    width: 50px;
+}
+
+
+
 
