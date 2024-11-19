@@ -24,6 +24,7 @@ body {
 header,
 section {
     width: 100%;
+
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -33,7 +34,7 @@ section {
 
 footer {
     width: 100%;
-    padding: 25px 0px;
+    padding: 12.5px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +42,7 @@ footer {
 
 img {
     width: 100%;
+    height: 100%;
 }
 
 .heading {
@@ -56,8 +58,7 @@ img {
 
 .para {
     font-size: 17.5px;
-    line-height: 1.2;
-    letter-spacing: 0.5px;
+    line-height: 1.15;
     text-align: justify;
     display: flex;
     flex-direction: column;
@@ -66,6 +67,7 @@ img {
 
 nav {
     width: 100%;
+    padding: 5px 25px;
     max-width: 1400px;
     display: flex;
     flex-direction: row;
@@ -82,7 +84,7 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 75px;
+    gap: 37.5px;
 }
 
 .nav_btn {
@@ -92,9 +94,18 @@ nav {
     color: #333;
 }
 
+.s-c3{
+    width: 50px;
+    position: absolute;
+    top: 80%;
+    right: 5%;
+    z-index: 5px;
+    cursor: pointer;
+}
+
 /* Section 1 */
 #Overview {
-    padding: 50px 0px;
+    padding: 100px 0px;
 }
 
 .s1-c {
@@ -133,22 +144,65 @@ nav {
     background-color: #FCF0D8;
 }
 
-.s2-c {
+.s2-c1 {
     width: 95%;
     align-self: self-end;
     display: flex;
     flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.s2-c2{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
 }
 
 .s2-ssc2{
     width: 60%;
 }
 
-/*Section 3 */
-#Specifications{
-    padding: 50px 0px;
+.swiper {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    overflow: hidden;
 }
 
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    font-size: 16px;
+    background: #fff;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: scale(0.8); /* Shrink the other slides */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.swiper-slide h3 {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.s2-c2ss{
+    margin-bottom: 12.5px;
+}
+
+/*Section 3 */
+#Specifications{
+    padding: 100px 0px;
+}
 
 .s3-c1{
     width: 90%;
@@ -170,26 +224,25 @@ nav {
     grid-row-gap: 25px;
 }
 
-#s31{
-    background: linear-gradient(to bottom, #fcd46a, #b17400);
-}
-
 .s3-ssc{
     width: 100%;
-    height: 350px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 30px;
+    padding: 25px 25px 37.5px 25px;
     background-color: #EEEEEE;
 }
 
-.s3-sssc{
-    width: 75px;
+.s3-ssc:hover{
+    background: linear-gradient(to bottom, #fcd46a, #b17400);
 }
 
-#s3-img2{
-    width: 50px;
+.s3-sssc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
 }
 
 h3{
@@ -200,13 +253,14 @@ ul{
     margin-left: 15px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    text-align: justify;
+    gap: 5px;
+    text-align: left;
+    font-size: 16px;
 }
 
 /* Section 4 */
 #Floor-Plans{
-    padding: 50px 0px;
+    padding: 100px 0px;
 }
 
 .s4-c1{
@@ -234,26 +288,23 @@ ul{
 }
 
 .s4-btn{
-    width: 225px;
+    width: 200px;
     padding: 20px;
-    font-size: 24px;
-}
-
-#s4btn1{
-    background: linear-gradient(to bottom, #fcd46a, #b17400);
-    border: none;
-}
-
-#s4btn2{
+    font-size: 22px;
     background-color: transparent;
     border: 1px #D8D9DA solid;
+}
+
+.s4-btn.active {
+    background: linear-gradient(to bottom, #fcd46a, #b17400);
+    color: white;
 }
 
 .s4-2sc{
     width: 90%;
     display: flex;
     flex-direction: row;
-    gap: 25px;
+    gap: 50px;
 }
 
 .s4-ssc{
@@ -264,18 +315,39 @@ ul{
     justify-content: center;
     align-items: center;
     gap: 25px;
-    background-color: #fff;
 }
 
 .s4-sssc{
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
     padding: 12.5px;
+}
+
+.s4-3sc{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.s4-2sc,
+.s4-3sc {
+    display: none; /* Hide by default */
+}
+
+.s4-2sc.active{
+    display: flex; /* Show active section */
+}
+
+.s4-3sc.active{
+    display: grid; /* Show active section */
 }
 
 /* section 5 */
 #Location-Map{
-    padding: 50px 0px;
+    padding: 100px 0px;
 }
 
 .s5-c1{
@@ -290,7 +362,6 @@ ul{
 }
 
 .s5-ssc1{
-    width: 40%;
     margin-bottom: 0px;
 }
 
@@ -298,14 +369,13 @@ ul{
     width: 90%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 25px;
 }
 
 .s5-s1c{
     width: 80%;
 }
-
 
 .s5-s2c{
     width: 90%;
@@ -321,13 +391,18 @@ ul{
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 12.5px 25px;
+    padding: 15px 25px;
     background-color: #EEEEEE;
+    font-size: 20px;
+}
+
+.s5-ss2c:hover{
+    background: linear-gradient(to bottom, #fcd46a, #b17400);
 }
 
 .s5-sss2c{
     width: 45px;
-    height: 50px;
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -335,7 +410,7 @@ ul{
 
 /*Section 6*/
 #About-Developer{
-    padding: 50px 0px;
+    padding: 100px 0px;
 }
 
 .s6-c1{
@@ -362,11 +437,11 @@ ul{
 }
 
 .s6-ss1c{
-    width: 300px;
+    width: 250px;
 }
 
 .s6-ss2c{
-    width: 25px;
+    width: 20px;
 }
 
 .s6-s2c{
@@ -375,7 +450,7 @@ ul{
 
 /*Section 7*/
 #Enquire-Now{
-    padding: 100px;
+    padding: 100px 0px;
     background: linear-gradient(to bottom, #fcd46a, #b17400);
     gap: 25px;
     color: white;
@@ -386,7 +461,7 @@ ul{
 }
 
 .s7-c2{
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -398,28 +473,41 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12.5px;
+    gap: 50px;
 }
 
-input{
-    width: 100%;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px white solid;
+input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  padding: 8px;
 }
 
+input:hover {
+    border-bottom: 2px solid white;
+}
+  
 input::placeholder{
     color: white;
+    font-size: 17.5px;
+    font-weight: 500;
+}
+
+b{
+    font-size: 18px;
 }
 
 .s2c2{
     align-self: center;
-    width: 200px;
+    width: 150px;
     padding: 12.5px;
     background-color: white;
     border: none;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .s7-c4{
@@ -431,7 +519,7 @@ input::placeholder{
 }
 
 .s7-s4c{
-    width: 50px;
+    width: 45px;
 }
 
 
