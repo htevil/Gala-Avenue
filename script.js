@@ -36,3 +36,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+// Get all accordion sections
+const accordionSections = document.querySelectorAll('.s5-ss2c');
+
+// Add click event to each accordion button
+accordionSections.forEach((section) => {
+    const button = section.querySelector('.accordion-btn');
+    const content = button.nextElementSibling;
+
+    button.addEventListener('click', () => {
+        // Close all other sections and reset their background
+        accordionSections.forEach((otherSection) => {
+            if (otherSection !== section) {
+                const otherContent = otherSection.querySelector('.accordion-content');
+                if (otherContent) {
+                    otherContent.style.display = 'none';
+                }
+                otherSection.style.background = ''; // Reset background
+            }
+        });
+
+        // Toggle the current section visibility and background
+        if (content.style.display === 'flex') {
+            content.style.display = 'none'; // Hide content
+            section.style.background = ''; // Reset background
+        } else {
+            content.style.display = 'flex'; // Show content
+            section.style.background = 'linear-gradient(to bottom, #fcd46a, #b17400)'; // Apply gradient
+        }
+    });
+});
+
+
+
+
+

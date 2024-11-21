@@ -18,13 +18,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;
 }
 
 header,
 section {
     width: 100%;
-
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -57,7 +55,7 @@ img {
 }
 
 .para {
-    font-size: 17.5px;
+    font-size: 16px;
     line-height: 1.15;
     text-align: justify;
     display: flex;
@@ -68,7 +66,6 @@ img {
 nav {
     width: 100%;
     padding: 5px 25px;
-    max-width: 1400px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -76,7 +73,7 @@ nav {
 }
 
 .s-sc1 {
-    width: 120px;
+    width: 100px;
 }
 
 .s-sc2 {
@@ -84,28 +81,27 @@ nav {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 37.5px;
+    gap: 50px;
 }
 
 .nav_btn {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     color: #333;
 }
 
-.s-c3{
+#scroll-button{
     width: 50px;
-    position: absolute;
-    top: 80%;
-    right: 5%;
-    z-index: 5px;
+    position: relative;
+    top: -300px;
+    left: 95%;
     cursor: pointer;
 }
 
 /* Section 1 */
 #Overview {
-    padding: 100px 0px;
+    padding: 100px 0px 100px 50px;
 }
 
 .s1-c {
@@ -125,11 +121,11 @@ nav {
 
 .s1-ssc1 {
     padding: 12.5px 0px;
-    width: 50%;
+    width: 100%;
 }
 
 .s1-ssc2 {
-    width: 50%;
+    width: 100%;
     max-width: 720px;
 }
 
@@ -153,7 +149,7 @@ nav {
 }
 
 .s2-c2{
-    width: 90%;
+    width: 95%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -166,10 +162,9 @@ nav {
 }
 
 .swiper {
-    width: 90%;
-    max-width: 1400px;
+    width: 100%;
+    max-width: 1320px;
     margin: auto;
-    overflow: hidden;
 }
 
 .swiper-wrapper {
@@ -177,31 +172,72 @@ nav {
 }
 
 .swiper-slide {
-    font-size: 16px;
+    padding: 0px 0px 50px 50px;
+}
+
+.s2-c2s{
+    font-size: 14px;
     background: #fff;
     padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transform: scale(0.8); /* Shrink the other slides */
-}
-
-.swiper-slide img {
-    width: 100%;
-    height: auto;
-}
-
-.swiper-slide h3 {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #333;
+    padding-bottom: 5px;
 }
 
 .s2-c2ss{
-    margin-bottom: 12.5px;
+    margin-bottom: 2.5px;
+}
+
+.swiper-slide h3{
+    display: none;
+}
+
+.swiper-slide-active {
+    margin-right: 25px;
+    padding: 0px;
+}
+
+.swiper-slide-active .s2-c2s{
+    width: 332.5px;
+    height: 100%;
+    padding: 0px;
+}
+
+.swiper-slide-active .s2-c2ss{
+    margin-bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide-active h3{
+    display: block;
+    position: absolute;
+    top: 360px;
+    color: #fff;
+    text-align: left;
+    font-size: 20px;
+}
+
+.swiper-slide-active span{
+    display: none;
+}
+
+.swiper-button-prev{
+    position: absolute;
+    top: 90%;
+    left: 30%
+}
+
+.swiper-button-Next{
+    position: absolute;
+    top: 90%;
+    left: 35%
 }
 
 /*Section 3 */
 #Specifications{
     padding: 100px 0px;
+    max-width: 1440px;
 }
 
 .s3-c1{
@@ -275,6 +311,7 @@ ul{
 }
 
 .s4-c2{
+    max-width: 1400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -389,23 +426,50 @@ ul{
 .s5-ss2c{
     width: 90%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
     padding: 15px 25px;
     background-color: #EEEEEE;
-    font-size: 20px;
-}
-
-.s5-ss2c:hover{
-    background: linear-gradient(to bottom, #fcd46a, #b17400);
+    font-size: 18px;
 }
 
 .s5-sss2c{
-    width: 45px;
-    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5px;
+}
+.s5-ssss2c{
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Optional Styles for Button and Content */
+.accordion-btn {
+    width: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.accordion-content {
+    display: none;
+    flex-direction: column;
+    justify-self: flex-start;
+    gap: 10px;
+    padding: 12.5px;
+    margin-top: 12.5px;
+}
+
+/* Optional: Arrow rotation */
+.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
 }
 
 /*Section 6*/
