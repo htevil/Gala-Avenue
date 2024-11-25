@@ -1,4 +1,24 @@
-// Attach a click event to the SVG
+//Sidebar
+const sidebar = document.getElementById('sidebar');
+const menuIcon = document.getElementById('menuIcon');
+const menuButton = document.getElementById('menuButton');
+
+function toggleSidebar() {
+    if (sidebar.style.left === '0px') {
+        sidebar.style.left = '-300px';
+        menuIcon.src = './asset/menu-icon.png'; // Replace with the closed menu icon
+    } else {
+        sidebar.style.left = '0px';
+        menuIcon.src = './asset/open_menu-icon.png'; // Replace with the opened menu icon
+    }
+}
+
+function navigateToHome() {
+    window.location.href = '/';
+}
+
+
+// Scroll-btn
 document.getElementById('scroll-button').addEventListener('click', () => {
     const overviewSection = document.getElementById('Overview');
     if (overviewSection) {
@@ -10,8 +30,8 @@ document.getElementById('scroll-button').addEventListener('click', () => {
 document.addEventListener("DOMContentLoaded", () => {
     const floorPlanBtn = document.getElementById("s4btn1");
     const unitPlanBtn = document.getElementById("s4btn2");
-    const floorPlanSection = document.querySelector(".s4-2sc");
-    const unitPlanSection = document.querySelector(".s4-3sc");
+    const floorPlanSection = document.querySelector(".s4-c2s2");
+    const unitPlanSection = document.querySelector(".s4-c2s3");
 
     // By default, FLOOR PLAN is active
     floorPlanBtn.classList.add("active");
@@ -38,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Get all accordion sections
-const accordionSections = document.querySelectorAll('.s5-ss2c');
+const accordionSections = document.querySelectorAll('.s5-c2s2s');
 
 // Add click event to each accordion button
 accordionSections.forEach((section) => {
@@ -67,6 +87,11 @@ accordionSections.forEach((section) => {
         }
     });
 });
+
+
+
+
+
 
 
 

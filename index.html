@@ -13,53 +13,67 @@
 <body>
     <header>
         <nav class="s-c1">
-            <div class="s-sc1">
+            <div class="s-c1s1">
                 <img src="./asset/logo.svg" alt="Logo">
             </div>
-            <div class='s-sc2'>
-                <a href="#Overview" class='nav_btn'>Overview</a>
-                <a href="#Amenities" class='nav_btn'>Amenities</a>
-                <a href="#Specifications" class='nav_btn'>Specification</a>
-                <a href="#Floor-Plans" class='nav_btn'>Floor Plans</a>
-                <a href="#Location-Map" class='nav_btn'>Location Map</a>
-                <a href="#About-Developer" class='nav_btn'>About Developer</a>
-                <a href="#Enquire-Now " class='nav_btn'>Enquire Now</a>
+            <div class='s-c1s2' id="desktopMenu">
+                <div class="s-c1s2s1">
+                    <a href="#Overview" class='nav_btn'>Overview</a>
+                    <a href="#Amenities" class='nav_btn'>Amenities</a>
+                    <a href="#Specifications" class='nav_btn'>Specification</a>
+                    <a href="#Floor-Plans" class='nav_btn'>Floor Plans</a>
+                    <a href="#Location-Map" class='nav_btn'>Location Map</a>
+                    <a href="#About-Developer" class='nav_btn'>About Developer</a>
+                    <a href="#Enquire-Now " class='nav_btn'>Enquire Now</a>
+                </div>
+                <div class="s-c1s2s2" id="menuButton" onclick="toggleSidebar()">
+                    <img src="./asset/menu-icon.png" alt="menu_btn" id="menuIcon">
+                </div>
+            </div>
+            <div class="s-c1s3" id="sidebar">
+                <div class="s-c1s3s1">
+                    <img src="./asset/close.png" alt="close_btn" class="close-btn" onclick="toggleSidebar()">
+                </div>
+                <div class="s-c1s3s2">
+                    <a href="#Overview" class='nav_btn'>Overview</a>
+                    <a href="#Amenities" class='nav_btn'>Amenities</a>
+                    <a href="#Specifications" class='nav_btn'>Specification</a>
+                    <a href="#Floor-Plans" class='nav_btn'>Floor Plans</a>
+                    <a href="#Location-Map" class='nav_btn'>Location Map</a>
+                    <a href="#About-Developer" class='nav_btn'>About Developer</a>
+                    <a href="#Enquire-Now " class='nav_btn'>Enquire Now</a>
+                </div>
             </div>
         </nav>
         <div class="s-c2">
             <img src="./asset/banner.jpg" alt="header_img">
-            <img src="./asset/scroll.svg" alt="scroll-svg" id="scroll-button">
+        </div>
+        <div class="s-c3" id="scroll-button">
+            <img src="./asset/scroll.svg" alt="scroll-svg">
         </div>
     </header>
     <main>
         <section id="Overview">
             <div class="s1-c">
-                <h1 class="s1-sc1 heading">Overview</h1>
-                <div class="s1-sc2">
-                    <div class="s1-ssc1">
-                        <div class="s1-sssc1 para-heading">
-                            Adding Effortless Elegance to Your Lifestyle!
+                <h1 class="s1-c1s heading">Overview</h1>
+                <div class="s1-c2s">
+                    <div class="s1-c2ss1">
+                        <div class="s1-c2ss1s1 para-heading">
+                            1, 2 & 3 BHK Homes At Mulund West
                         </div>
-                        <div class="s1-sssc2 para">
-                            <p>
-                                Welcome to Gala Avenue, where innovation and dedication redefine modern living. As
-                                creators
-                                of this exceptional project, we
-                                proudly showcase our commitment to excellence and passion for crafting inspiring spaces.
-                            </p>
-                            <p>
-                                At Gala Realty, we go beyond building homes—we curate lifestyles that blend contemporary
-                                design with comfort. Every detail of
-                                Gala Avenue has been thoughtfully crafted to elevate your living experience.
-                            </p>
-                            <p>
-                                More than just a residence, Gala Avenue is a community where memories are made, families
-                                thrive, and dreams are nurtured.
-                                Welcome to a life of comfort, aspiration, and possibility.
-                            </p>
+                        <div class="s1-c1ss1s2 para">
+                            <p>Welcome to Gala Avenue, where innovation and dedication redefine modern living. As
+                                creators of this exceptional project, we proudly showcase our commitment to excellence
+                                and passion for crafting inspiring spaces.</p>
+                            <p>At Gala Realty, we go beyond building homes—we curate lifestyles that blend contemporary
+                                design with comfort. Every detail of Gala Avenue has been thoughtfully crafted to
+                                elevate your living experience.</p>
+                            <p>More than just a residence, Gala Avenue is a community where memories are made, families
+                                thrive, and dreams are nurtured. Welcome to a life of comfort, aspiration, and
+                                possibility.</p>
                         </div>
                     </div>
-                    <div class="s1-ssc2">
+                    <div class="s1-c2ss2">
                         <img src="./asset/Overview-img.png" src="header_img">
                     </div>
                 </div>
@@ -67,11 +81,11 @@
         </section>
         <section id="Amenities">
             <div class="s2-c1">
-                <div class="s2-sc1">
-                    <h1 class="s2-ssc1 heading">
+                <div class="s2-c1s">
+                    <h1 class="s2-c1ss1 heading">
                         Amenities
                     </h1>
-                    <p class="s2-ssc2 para">
+                    <p class="s2-c1ss2 para">
                         At Gala Avenue, step into luxury with a grand Double Height Entrance Lobby and a dedicated
                         Concierge
                         Desk, always ready to elevate your mood and enhance your comfort. The state-of-the-art amenities
@@ -79,7 +93,7 @@
                     </p>
                 </div>
             </div>
-            <div class="swiper mySwiper">
+            <div class="s2-c2 swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="s2-c2s">
@@ -123,7 +137,16 @@
                                 <img src="./asset/Ame-img5.jpg" alt="ame_img5">
                                 <h3>Multi-level vehicle parking system</h3>
                             </div>
-                            <span>Multi-level vehicle parking system<br /><br /></span>
+                            <span>Multi-level vehicle parking system<br/><br/></span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="s2-c2s">
+                            <div class="s2-c2ss">
+                                <img src="./asset/Ame-img6.jpg" alt="ame_img6">
+                                <h3>Adding Effortless Elegance to Entrance Lobby</h3>
+                            </div>
+                            <span> Adding Effortless Elegance to Entrance Lobby</span>
                         </div>
                     </div>
                 </div>
@@ -133,15 +156,15 @@
         </section>
         <section id="Specifications">
             <div class="s3-c1">
-                <h1 class="s3-sc1 heading">Specifications</h1>
-                <div class="s3-sc2 para">
+                <h1 class="s3-c1s1 heading">Specifications</h1>
+                <div class="s3-c1s2 para">
                     <p>Earthquake-resistant RCC frame structure</p>
                     <p>Internal and external walls as per the structural requirements</p>
                 </div>
             </div>
             <div class="s3-c2">
-                <div class="s3-ssc" id="s31">
-                    <div class="s3-sssc">
+                <div class="s3-c2s">
+                    <div class="s3-c2s1">
                         <img src="./asset/spec1.png" alt="Plastering and Painting">
                     </div>
                     <h3>Plastering & Painting</h3>
@@ -151,8 +174,8 @@
                         <li>External Painting: Exterior Emulsion paint</li>
                     </ul>
                 </div>
-                <div class="s3-ssc">
-                    <div class="s3-sssc">
+                <div class="s3-c2s">
+                    <div class="s3-c2s1">
                         <img src="./asset/spec2.png" alt="Fire Safety" id="s3-img2">
                     </div>
                     <h3>Fire Safety</h3>
@@ -162,8 +185,8 @@
                         <li>Smoke detectors in common areas</li>
                     </ul>
                 </div>
-                <div class="s3-ssc">
-                    <div class="s3-sssc">
+                <div class="s3-c2s">
+                    <div class="s3-c2s1">
                         <img src="./asset/spec3.png" alt="Kitchen">
                     </div>
                     <h3>Kitchen</h3>
@@ -173,8 +196,8 @@
                         <li>Provision for water purifier</li>
                     </ul>
                 </div>
-                <div class="s3-ssc">
-                    <div class="s3-sssc">
+                <div class="s3-c2s">
+                    <div class="s3-c2s1">
                         <img src="./asset/spec4.png" alt="Bathroom Fittings">
                     </div>
                     <h3>Bathroom Fittings & Accessories</h3>
@@ -184,8 +207,8 @@
                         <li>Bathrooms with exhaust fan</li>
                     </ul>
                 </div>
-                <div class="s3-ssc">
-                    <div class="s3-sssc">
+                <div class="s3-c2s">
+                    <div class="s3-c2s1">
                         <img src="./asset/spec5.png" alt="Doors and Windows">
                     </div>
                     <h3>Doors & Windows</h3>
@@ -196,8 +219,8 @@
                         <li>Glass railing for all Decks</li>
                     </ul>
                 </div>
-                <div class="s3-ssc">
-                    <div class="s3-sssc">
+                <div class="s3-c2s">
+                    <div class="s3-c2s1">
                         <img src="./asset/spec6.png" alt="Generator Backup" style="width: 100%;">
                     </div>
                     <h3>Generator Back-Up</h3>
@@ -209,107 +232,111 @@
         </section>
         <section id="Floor-Plans">
             <div class="s4-c1">
-                <h1 class="s4-sc1 heading">Floor Plans</h1>
-                <div class="s4-sc2 para">
+                <h1 class="s4-c1s1 heading">Floor Plans</h1>
+                <div class="s4-c1s2 para">
                     <p>Earthquake-resistant RCC frame structure</p>
                     <p>Internal and external walls as per the structural requirements</p>
                 </div>
             </div>
             <div class="s4-c2">
-                <div class="s4-1sc">
-                    <button class="s4-btn" id="s4btn1">FLOOR PLAN</button>
-                    <button class="s4-btn" id="s4btn2">UNIT PLAN</button>
+                <div class="s4-c2s1">
+                    <button class="s4-btn" id="s4btn1">2D</button>
+                    <button class="s4-btn" id="s4btn2">Isometric</button>
                 </div>
-                <div class="s4-2sc">
+                <div class="s4-c2s2">
                     <div class="s4-ssc">
-                        <img src="./asset/FloorPlan-img1.png" alt="FloorPlan_img1">
+                        <img src="./asset/8th--12th-2D.png" alt="FloorPlan_img1">
                         <span class="s4-sssc">8TH-12TH FLOOR</span>
                     </div>
                     <div class="s4-ssc">
-                        <img src="./asset/FloorPlan-img2.png" alt="FloorPlan_img2">
+                        <img src="./asset/13th---17th-2D.png" alt="FloorPlan_img2">
                         <span class="s4-sssc">13TH-17TH FLOOR</span>
                     </div>
                 </div>
-                <div class="s4-3sc">
+                <div class="s4-c2s3">
                     <div class="s4-ssc">
-                        <img src="./asset/2nd-5th FLOOR PLAN_page-0001.png" alt="2nd-5th_FLOOR-PLAN_img1">
+                        <img src="./asset/8th--12th-isometric.png" alt="2nd-5th_FLOOR-PLAN_img1">
+                        <span class="s4-sssc">8TH-12TH FLOOR</span>
                     </div>
                     <div class="s4-ssc">
-                        <img src="./asset/9-12TH FLOOR PLAN_page-0001.png" alt="9-12TH_FLOOR PLAN_img2">
-                    </div>
-                    <div class="s4-ssc">
-                        <img src="./asset/13TH-17TH FLOOR PLAN_page-0001.png" alt="13TH-17TH_FLOOR-PLAN_img3">
+                        <img src="./asset/13th---17th-isometric.png" alt="9-12TH_FLOOR PLAN_img2">
+                        <span class="s4-sssc">13TH-17TH FLOOR</span>
                     </div>
                 </div>
             </div>
         </section>
         <section id="Location-Map">
             <div class="s5-c1">
-                <h1 class="s5-sc1 heading">Location Map</h1>
-                <div class="s5-sc2">
-                    <h1 class="s5-ssc1 para-heading">Adding Effortless Elegance to Seamless Travel</h1>
-                    <p class="s5-ssc2 para">Gala Avenue simplifies your commute, placing you at the heart of major
+                <h1 class="s5-c1s1 heading">Location Map</h1>
+                <div class="s5-c1s2">
+                    <h1 class="s5-c1s2s1 para-heading">Adding Effortless Elegance to Seamless Travel</h1>
+                    <p class="s5-c12s2 para">Gala Avenue simplifies your commute, placing you at the heart of major
                         landmarks.</p>
                 </div>
             </div>
             <div class="s5-c2">
-                <div class="s5-s1c">
+                <div class="s5-c2s1">
                     <img src="./asset/Map-img.png" alt="Map-img">
                 </div>
-                <div class="s5-s2c">
-                    <div class="s5-ss2c">
-                        <div class="s5-sss2c">
-                            <div class="s5-ssss2c"><img src="./asset/la1.png" alt="Locmap_img1"></div>
+                <div class="s5-c2s2">
+                    <div class="s5-c2s2s">
+                        <div class="s5-c2s2ss">
+                            <div class="s5-c2s2sss"><img src="./asset/la1.png" alt="Locmap_img1"></div>
                             <span>Railway Stations</span>
                         </div>
-                        <button class="down-btn accordion-btn"><img src="./asset/svg_.svg" alt="down_svg" class="down-btn"></button>
+                        <button class="down-btn accordion-btn"><img src="./asset/svg_.svg" alt="down_svg"
+                                class="down-btn"></button>
                         <div class="accordion-content">
                             <span>5 Mins - Mulund Railway Station</span>
-                            <span>10 Mins - Nahur Railway Station</span>    
+                            <span>10 Mins - Nahur Railway Station</span>
                         </div>
                     </div>
-                    <div class="s5-ss2c">
-                        <div class="s5-sss2c">
-                            <div class="s5-ssss2c"><img src="./asset/La2.png" alt="La_img2"></div>
+                    <div class="s5-c2s2s">
+                        <div class="s5-c2s2ss">
+                            <div class="s5-c2s2sss"><img src="./asset/La2.png" alt="La_img2"></div>
                             <span>Upcoming Metro Station</span>
                         </div>
-                        <button class="down-btn accordion-btn"><img src="./asset/svg_.svg" alt="down_svg" class="down-btn"></button>
+                        <button class="down-btn accordion-btn"><img src="./asset/svg_.svg" alt="down_svg"
+                                class="down-btn"></button>
                         <div class="accordion-content">
                             <span>15 Mins - Sonapur Metro Station</span>
-                            <span>12 Mins - Mulund Fire Metro Station</span>    
+                            <span>12 Mins - Mulund Fire Metro Station</span>
                         </div>
                     </div>
-                    <div class="s5-ss2c">
-                        <div class="s5-sss2c">
-                            <div class="s5-ssss2c"><img src="./asset/La3.png" alt="La_img3"></div>
+                    <div class="s5-c2s2s">
+                        <div class="s5-c2s2ss">
+                            <div class="s5-c2s2sss"><img src="./asset/La3.png" alt="La_img3"></div>
                             <span>Hospitals</span>
                         </div>
-                        <button class="down-btn accordion-btn"><img src="./asset/svg_.svg" alt="down_svg" class="down-btn"></button>
+                        <button class="down-btn accordion-btn"><img src="./asset/svg_.svg" alt="down_svg"
+                                class="down-btn"></button>
                         <div class="accordion-content">
                             <span>3 Mins - Hira Mongi Navneet Hospital</span>
                             <span>7 Mins - Fortis Hospital</span>
                             <span>3 Mins - Ashirwad Critical Care Unit</span>
-                            <span>7 Mins - Sigma Multispeciality Hospital</span>    
+                            <span>7 Mins - Sigma Multispeciality Hospital</span>
                         </div>
                     </div>
-                    <div class="s5-ss2c">
-                        <div class="s5-sss2c">
-                            <div class="s5-ssss2c"><img src="./asset/La4.png" alt="La_img4"></div>
+                    <div class="s5-c2s2s">
+                        <div class="s5-c2s2ss">
+                            <div class="s5-c2s2sss"><img src="./asset/La4.png" alt="La_img4"></div>
                             <span>Temples</span>
                         </div>
-                        <button class="down-btn accordion-btn"><img src="./asset/svg_.svg" alt="down_svg" class="down-btn"></button>
+                        <button class="down-btn accordion-btn"><img src="./asset/svg_.svg" alt="down_svg"
+                                class="down-btn"></button>
                         <div class="accordion-content">
                             <span>4 Mins - Sarvoday Jain Derasar</span>
-                            <span>4 Mins - Vasupujya Jain Derasar</span>   
-                            <span>2 Mins - Shree Balaji Temple</span>     
+                            <span>4 Mins - Vasupujya Jain Derasar</span>
+                            <span>2 Mins - Shree Balaji Temple</span>
                         </div>
                     </div>
-                    <div class="s5-ss2c">
-                        <div class="s5-sss2c">
-                            <div class="s5-ssss2c"><img src="./asset/La5.png" alt="La_img5"></div>
+                    <div class="s5-c2s2s">
+                        <div class="s5-c2s2ss">
+                            <div class="s5-c2s2sss"><img src="./asset/La5.png" alt="La_img5"></div>
                             <span>Educational Institutes</span>
                         </div>
-                        <button class="down-btn accordion-btn"><img src="./asset/svg_.svg" alt="down_svg" class="down-btn"></button>
+                        <button class="down-btn accordion-btn"><img src="./asset/svg_.svg" alt="down_svg"
+                                class="down-btn"></button>
                         <div class="accordion-content">
                             <span>8 Mins - Mulund College Of Commerce</span>
                             <span>15 Mins - V.G.Vaze College Of Arts, Science And Commerce</span>
@@ -317,9 +344,9 @@
                             <span>2 Mins - Shreemati Nalinibai Gajanan Purandare High School</span>
                         </div>
                     </div>
-                    <div class="s5-ss2c">
-                        <div class="s5-sss2c">
-                            <div class="s5-ssss2c"><img src="./asset/La6.png" alt="La_img6"></div>
+                    <div class="s5-c2s2s">
+                        <div class="s5-c2s2ss">
+                            <div class="s5-c2s2sss"><img src="./asset/La6.png" alt="La_img6"></div>
                             <span>Shopping Centres</span>
                         </div>
                         <button class="down-btn accordion-btn"><img src="./asset/svg_.svg" alt="down_svg"></button>
@@ -327,10 +354,10 @@
                             <span>24 Mins - Viviana Mall</span>
                             <span>8 Mins - R - Galleria</span>
                             <span>19 Mins - Korum Mall</span>
-                            <span>10 Mins - R Mall</span>    
+                            <span>10 Mins - R Mall</span>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
         </section>
         <section id="About-Developer">
@@ -338,33 +365,8 @@
                 <h1 class="heading">About Developer</h1>
             </div>
             <div class="s6-c2">
-                <div class="s6-s1c">
-                    <div class="s6-ss1c"><img src="./asset/Aboutus-img.png" alt="Aboutus-img"></div>
-                    <div class="s6-ss2c"><img src="./asset/line.png" alt="line"></div>
-                </div>
-                <div class="s6-s2c para">
-                    <p>
-                        Donec ac orci at mi tincidunt imperdiet. Sed eu rutrum tellus, eu efficitur augue. Nullam
-                        turpis magna, tempor et justo id, maximus porta nisl. Pellentesque habitant morbi tristique
-                        senectus et netus et malesuada fames ac turpis egestas. Integer dignissim turpis et auctor
-                        fringilla. Sed a neque non ante auctor scelerisque quis ut velit. Aenean et lacus id leo laoreet
-                        aliquam id rhoncus magna. Mauris justo augue, pellentesque at odio sed, aliquet aliquam
-                        risus. Vestibulum sodales tempus metus, a dignissim libero consectetur at. Proin tempus
-                        tellus nec euismod malesuada. Donec maximus justo nec ante volutpat volutpat. Integer
-                        augue quam, vestibulum at nulla vitae, tincidunt condimentum lacus. Praesent euismod,
-                        orci et dapibus feugiat, nunc risus aliquet arcu, vel euismod lorem orci eget libero.
-                        Vestibulum viverra mauris vitae nibh convallis, ac fermentum risus euismod. Nunc placerat
-                        sit amet nisl nec porta. Vivamus ac justo ex.
-                    </p>
-                    <p>
-                        Cras id magna porttitor, volutpat lorem in, egestas ante. Nulla porta eget ipsum ac efficitur.
-                        Morbi mattis magna in tempor suscipit. Fusce iaculis quam id urna sollicitudin, nec
-                        elementum enim cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-                        quis urna eget justo viverra venenatis a quis dolor. Fusce ut lorem eget ligula malesuada
-                        semper eu et nulla. Morbi feugiat vulputate massa a volutpat. Nullam placerat rutrum urna,
-                        id dictum ante. Suspendisse dapibus nibh neque, eget congue tellus vulputate cursus.
-                        Quisque molestie mollis lacus, vel porta urna bibendum id.
-                    </p>
+                <div class="s6-c2s">
+                    <div class="s6-c2ss"><img src="./asset/Aboutus-img.png" alt="Aboutus-img"></div>
                 </div>
             </div>
         </section>
@@ -400,18 +402,44 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 4,
-            spaceBetween: 30,
+            slidesPerView: 5,
+            spaceBetween: 5,
             loop: true,
             autoplay: {
-                delay: 3000,
+                delay: 2500,
                 disableOnInteraction: false,
             },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-            
+            breakpoints: {
+                300:{
+                    slidesPerView: 1,
+                    spaceBetween: 5,
+                },
+                400:{
+                    slidesPerView: 1.5,
+                    spaceBetween: 5,
+                },
+                600: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 5,
+                },
+                800: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                1000: {
+                    slidesPerView: 3.5,
+                    spaceBetween: 10,
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                },
+            },
+
         });
     </script>
 </body>
