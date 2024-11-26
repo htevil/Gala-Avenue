@@ -641,12 +641,12 @@ input:hover {
 
 input::placeholder {
     color: white;
-    font-size: 17.5px;
+    font-size: 16px;
     font-weight: 500;
 }
 
 b {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .s2c2 {
@@ -655,7 +655,7 @@ b {
     padding: 12.5px;
     background-color: white;
     border: none;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     cursor: pointer;
 }
@@ -794,7 +794,6 @@ b {
 
     input::placeholder {
         font-size: 16px;
-        font-weight: 500;
     }
 
     b {
@@ -825,9 +824,10 @@ b {
         gap: 7.5px;
     }
 
-    footer{
+    footer {
         text-align: center;
-        font-size: 12px;
+        font-size: 10px;
+        padding: 10px;
     }
 
     /*section1*/
@@ -918,18 +918,30 @@ b {
         width: 30px;
     }
 
+    /*Section 6*/
+    #About-Developer {
+        padding: 25px 0px;
+    }
+
+    .s6-c2ss {
+        width: 150px;
+    }
+
     /*Section 7*/
+    #Enquire-Now {
+        padding: 25px 0px;
+    }
 
     .s7-s2c1 {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        gap: 25px;
+        grid-column-gap: 25px;
+        grid-row-gap: 25px;
     }
 
     input::placeholder {
         font-size: 14px;
-        font-weight: 500;
     }
 
     b {
@@ -939,6 +951,7 @@ b {
     .s2c2 {
         width: 125px;
         font-size: 16px;
+        padding: 8.75px;
     }
 
     .s7-s4c {
@@ -949,7 +962,7 @@ b {
 
 @media (max-width: 650px) {
     .heading {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .para-heading {
@@ -1038,7 +1051,7 @@ b {
     }
 
     .s2-c2 {
-        width: 90%;
+        width: 80%;
     }
 
     .swiper-slide-active h3 {
@@ -1131,51 +1144,25 @@ b {
     }
 
     /*Section 7*/
-    #Enquire-Now {
-        padding: 25px 0px;
-        gap: 12.5px;
-    }
-
-    .s7-c1 {
-        color: white;
-    }
-
-    .s7-s2c1 {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 12.5px;
-    }
-
-    input {
-        padding: 5px;
-    }
-
-    input:hover {
-        border-bottom: 2px solid white;
-    }
-
     input::placeholder {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     b {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .s2c2 {
         width: 100px;
-        padding: 6.5px;
+        padding: 6.25px;
         font-size: 14px;
     }
 
-    .s7-s4c {
-        width: 30px;
-    }
-
-    .s7-c3,.s7-c4{
+    .s7-c3,
+    .s7-c4 {
         width: 90%;
         font-size: 12px;
+        gap: 5px;
+        text-align: center;
     }
-
 }
