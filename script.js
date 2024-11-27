@@ -56,17 +56,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
 // Get all accordion sections
 const accordionSections = document.querySelectorAll('.s5-c2s2s');
 
 // Add click event to each accordion button
 accordionSections.forEach((section) => {
+    const sec = section.querySelector('.s5-c2s2ss');
     const button = section.querySelector('.accordion-btn');
     const content = section.querySelector('.accordion-content');
     const icon = button.querySelector('img'); // Get the image inside the button
 
-    button.addEventListener('click', () => {
+    sec.addEventListener('click', () => {
         // Close all other sections and reset their background and icon rotation
         accordionSections.forEach((otherSection) => {
             if (otherSection !== section) {
@@ -99,74 +99,19 @@ accordionSections.forEach((section) => {
 document.getElementById('userForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent default form submission
 
-    // Get form values
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const mobile = document.getElementById('mobile').value.trim();
-    const whatsappNo = document.getElementById('whatsappNo').value.trim();
+    // Perform validation for all fields
+    validateName();
+    validateEmail();
+    validateMobile();
+    validateWhatsApp();
 
-    // Error messages
-    const nameError = document.getElementById('nameError');
-    const emailError = document.getElementById('emailError');
-    const mobileError = document.getElementById('mobileError');
-    const whatsappNoError = document.getElementById('whatsappNoError');
+    // Check if all fields are valid
+    if (isFormValid()) {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const mobile = document.getElementById('mobile').value.trim();
+        const whatsappNo = document.getElementById('whatsappNo').value.trim();
 
-    let isValid = true;
-
-    // Name validation
-    if (!name) {
-        nameError.textContent = '- Name is required';
-        nameError.style.display = 'block';
-        isValid = false;
-    } else if (!/^[a-zA-Z\s]+$/.test(name)) {
-        nameError.textContent = '- Name must contain letters only';
-        nameError.style.display = 'block';
-        isValid = false;
-    } else if (name.length < 3) {
-        nameError.textContent = '- Name must be at least 3 characters long';
-        nameError.style.display = 'block';
-        isValid = false;
-    } else {
-        nameError.style.display = 'none';
-    }
-
-    // Email validation
-    if (!email) {
-        emailError.textContent = '- Email is required';
-        emailError.style.display = 'block';
-        isValid = false;
-    } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
-        emailError.textContent = '- Invalid email format';
-        emailError.style.display = 'block';
-        isValid = false;
-    } else {
-        emailError.style.display = 'none';
-    }
-
-    // Mobile validation
-    if (!mobile) {
-        mobileError.textContent = '- Mobile number is required';
-        mobileError.style.display = 'block';
-        isValid = false;
-    } else if (!/^[6-9]\d{9}$/.test(mobile)) {
-        mobileError.textContent = '- Mobile number is Invalid';
-        mobileError.style.display = 'block';
-        isValid = false;
-    } else {
-        mobileError.style.display = 'none';
-    }
-
-    // WhatsApp number validation (optional)
-    if (whatsappNo && !/^[6-9]\d{9}$/.test(whatsappNo)) {
-        whatsappNoError.textContent = '- WhatsApp number is Invalid';
-        whatsappNoError.style.display = 'block';
-        isValid = false;
-    } else {
-        whatsappNoError.style.display = 'none';
-    }
-
-    // Form submission if valid
-    if (isValid) {
         console.log({
             name: name,
             email: email,
@@ -175,8 +120,102 @@ document.getElementById('userForm').addEventListener('submit', function (event) 
         });
         alert('Form submitted successfully!');
         this.reset(); // Reset form fields
+        clearErrors(); // Clear error messages
     }
 });
+
+// Real-time validation listeners
+document.getElementById('name').addEventListener('input', validateName);
+document.getElementById('email').addEventListener('input', validateEmail);
+document.getElementById('mobile').addEventListener('input', validateMobile);
+document.getElementById('whatsappNo').addEventListener('input', validateWhatsApp);
+
+// Validation functions
+function validateName() {
+    const name = document.getElementById('name').value.trim();
+    const nameError = document.getElementById('nameError');
+    if (!name) {
+        nameError.textContent = '- Name is required';
+        nameError.style.display = 'block';
+        return false;
+    } else if (!/^[a-zA-Z\s]+$/.test(name)) {
+        nameError.textContent = '- Name must contain letters only';
+        nameError.style.display = 'block';
+        return false;
+    } else if (name.length < 3) {
+        nameError.textContent = '- Name must be at least 3 characters long';
+        nameError.style.display = 'block';
+        return false;
+    } else {
+        nameError.style.display = 'none';
+        return true;
+    }
+}
+
+function validateEmail() {
+    const email = document.getElementById('email').value.trim();
+    const emailError = document.getElementById('emailError');
+    if (!email) {
+        emailError.textContent = '- Email is required';
+        emailError.style.display = 'block';
+        return false;
+    } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+        emailError.textContent = '- Invalid email format';
+        emailError.style.display = 'block';
+        return false;
+    } else {
+        emailError.style.display = 'none';
+        return true;
+    }
+}
+
+function validateMobile() {
+    const mobile = document.getElementById('mobile').value.trim();
+    const mobileError = document.getElementById('mobileError');
+    if (!mobile) {
+        mobileError.textContent = '- Mobile number is required';
+        mobileError.style.display = 'block';
+        return false;
+    } else if (!/^[6-9]\d{9}$/.test(mobile)) {
+        mobileError.textContent = '- Mobile number is Invalid';
+        mobileError.style.display = 'block';
+        return false;
+    } else {
+        mobileError.style.display = 'none';
+        return true;
+    }
+}
+
+function validateWhatsApp() {
+    const whatsappNo = document.getElementById('whatsappNo').value.trim();
+    const whatsappNoError = document.getElementById('whatsappNoError');
+    if (!whatsappNo) {
+        whatsappNoError.textContent = '- Whatsapp No is required';
+        whatsappNoError.style.display = 'block';
+        return false;
+    }else if (whatsappNo && !/^[6-9]\d{9}$/.test(whatsappNo)) {
+        whatsappNoError.textContent = '- WhatsApp number is Invalid';
+        whatsappNoError.style.display = 'block';
+        return false;
+    } else {
+        whatsappNoError.style.display = 'none';
+        return true;
+    }
+}
+
+// Check if the form is valid
+function isFormValid() {
+    return validateName() && validateEmail() && validateMobile() && validateWhatsApp();
+}
+
+// Clear all error messages
+function clearErrors() {
+    document.getElementById('nameError').style.display = 'none';
+    document.getElementById('emailError').style.display = 'none';
+    document.getElementById('mobileError').style.display = 'none';
+    document.getElementById('whatsappNoError').style.display = 'none';
+}
+
 
   
 

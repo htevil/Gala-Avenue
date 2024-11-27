@@ -12,8 +12,9 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-family: "Poppins", serif;
+    font-style: normal;
+    font-weight: 400;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,22 +57,26 @@ img {
 
 .heading {
     font-size: 44px;
+    font-weight: 700;
+    line-height: 1.5;
     color: #A97A1F;
 }
 
 .para-heading {
     font-size: 32px;
-    margin-bottom: 5px;
-    font-weight: 700;
+    font-weight: 600;
+    line-height: 1.5;
 }
 
 .para {
-    font-size: 16px;
-    line-height: 1.15;
-    text-align: justify;
+    font-size: 18px;
+    font-weight: 500;
+    color: gray;
+    line-height: 1.25;
     display: flex;
     flex-direction: column;
     gap: 12.5px;
+    
 }
 
 nav {
@@ -171,10 +176,6 @@ nav {
 .s1-c {
     width: 95%;
     align-self: flex-end;
-}
-
-.s1-c1s {
-    margin-bottom: 25px;
 }
 
 .s1-c2s {
@@ -405,7 +406,7 @@ nav {
 h3 {
     color: #A97A1F;
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 ul {
@@ -482,7 +483,7 @@ ul {
 .s4-sssc {
     width: 100%;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 20px;
     text-align: center;
     background-color: #fcd46a;
@@ -560,9 +561,10 @@ ul {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 15px 25px;
+    padding: 15px;
     background-color: #EEEEEE;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: 500;
     transition: background 0.3s ease;
 }
 
@@ -601,8 +603,9 @@ ul {
     display: none;
     flex-direction: column;
     justify-self: flex-start;
-    gap: 15px;
-    padding: 12.5px;
+    gap: 12.5px;
+    padding: 20px;
+    padding-bottom: 0px;
     margin-top: 12.5px;
     border-top: #000000 1.5px solid;
 }
@@ -622,30 +625,12 @@ ul {
 }
 
 .s6-c1 {
-    width: 90%;
     margin-bottom: 25px;
+    align-self: center;
 }
 
 .s6-c2 {
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-}
-
-.s6-c2s {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 12.5px;
-}
-
-.s6-c2ss {
-    width: 200px;
+    width: 150px;
 }
 
 /*Section 7*/
@@ -672,7 +657,7 @@ ul {
 .s7-c2s1 {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 50px;
 }
 
@@ -695,9 +680,9 @@ input::placeholder {
 
 .error {
     color: red;
-    font-size: 12px;
+    font-size: 14px;
     display: none;
-
+    margin-left: 10px;
 }
 
 .s7-c2s1s {
@@ -748,7 +733,7 @@ b {
     }
 
     .para {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     nav {
@@ -769,23 +754,11 @@ b {
     }
 
     /* Section 1 */
-    #Overview {
-        padding: 50px 0px;
-    }
-
-    .s1-c1s {
-        margin-bottom: 12.5px;
-    }
-
     .s1-c2s {
         gap: 37.5px;
     }
 
     /*section2*/
-    #Amenities {
-        padding: 50px 0px;
-    }
-
     .swiper-slide span {
         font-size: 14px;
         line-height: 1;
@@ -798,21 +771,13 @@ b {
     }
 
     /*Section 3 */
-    #Specifications {
-        padding: 50px 0px;
-    }
-
     .s3-c2 {
         grid-column-gap: 12.5px;
         grid-row-gap: 12.5px;
     }
 
     .s3-c2s {
-        padding: 25px;
-    }
-
-    .s3-c2s:hover {
-        background: linear-gradient(to bottom, #fcd46a, #b17400);
+        padding: 20px;
     }
 
     .s3-c2s1 {
@@ -864,7 +829,7 @@ b {
     }
 
     .s5-c2s2s {
-        padding: 10px 15px;
+        padding: 12.5;
         font-size: 14px;
     }
 
@@ -878,7 +843,8 @@ b {
 
     .accordion-content {
         gap: 10px;
-        padding: 10px;
+        padding: 15px;
+        padding-bottom: 0px;
     }
 
     /*Section 7*/
@@ -896,23 +862,22 @@ b {
 
     .s7-c2s2 {
         width: 125px;
-        font-size: 18px;
+        font-size: 16px;
     }
 
 }
 
 @media (max-width: 850px) {
     .heading {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .para-heading {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .para {
-        font-size: 13.5px;
-        line-height: 1.10;
+        font-size: 14px;
         gap: 7.5px;
     }
 
@@ -960,6 +925,10 @@ b {
         width: 80%;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
+    }
+
+    .swiper-slide span{
+        font-size: 14px;
     }
 
     .s3-c2s {
@@ -1024,10 +993,6 @@ b {
         padding: 25px 0px;
     }
 
-    .s6-c2ss {
-        width: 150px;
-    }
-
     /*Section 7*/
     #Enquire-Now {
         padding: 25px 0px;
@@ -1064,7 +1029,6 @@ b {
 @media (max-width: 650px) {
     .heading {
         font-size: 28px;
-        margin-bottom: 5px;
     }
 
     .para-heading {
@@ -1127,15 +1091,14 @@ b {
     }
 
     .s1-c2ss2 {
-        width: 80%;
-        min-width: 250px;
-        align-self: flex-end;
+        width: 90%;
+        align-self: center;
     }
 
     /*section2*/
     :root {
         --swiper-navigation-top-offset: 98%;
-        --swiper-navigation-sides-offset: 40%;
+        --swiper-navigation-sides-offset: 38%;
     }
 
     #Amenities {
@@ -1156,22 +1119,17 @@ b {
     }
 
     .s2-c2 {
-        width: 90%;
+        width: 75%;
     }
 
     .swiper-slide {
         margin-bottom: 30px;
     }
 
-    .swiper-slide span {
-        font-size: 10px;
-        line-height: 1;
-    }
 
     .swiper-slide-active h3 {
         position: absolute;
         left: 10px;
-        font-size: 14px;
     }
 
     /*Section 3 */
@@ -1184,7 +1142,7 @@ b {
     }
 
     .s3-c2 {
-        width: 80%;
+        width: 60%;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(6, 1fr);
     }
@@ -1199,6 +1157,7 @@ b {
 
     h3 {
         font-size: 14px;
+        font-weight: 600;
     }
 
     ul {
@@ -1253,13 +1212,9 @@ b {
         gap: 12.5px;
     }
 
-    .s5-c2s2s {
-        padding: 10px;
-        font-size: 12px;
-    }
-
-    .accordion-btn {
-        width: 15px;
+    /*section 6*/
+    .s6-c2{
+        width: 100px;
     }
 
     /*Section 7*/
@@ -1272,6 +1227,10 @@ b {
         align-items: center;
     }
 
+    input{
+        border-bottom: 1px solid white;
+    }
+
     input::placeholder {
         font-size: 12px;
     }
@@ -1280,7 +1239,7 @@ b {
         font-size: 12px;
     }
 
-    .s2c2 {
+    .s7-c2s2 {
         width: 100px;
         padding: 6.25px;
         font-size: 14px;
