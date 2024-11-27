@@ -75,8 +75,8 @@ img {
     line-height: 1.25;
     display: flex;
     flex-direction: column;
+    text-align: justify;
     gap: 12.5px;
-    
 }
 
 nav {
@@ -927,7 +927,7 @@ b {
         grid-template-rows: repeat(3, 1fr);
     }
 
-    .swiper-slide span{
+    .swiper-slide span {
         font-size: 14px;
     }
 
@@ -1029,16 +1029,18 @@ b {
 @media (max-width: 650px) {
     .heading {
         font-size: 28px;
+        line-height: 1.4;
     }
 
     .para-heading {
         font-size: 18px;
+        line-height: 1.4;
     }
 
     .para {
         font-size: 12px;
-        line-height: 1.10;
-        gap: 7.5px;
+        line-height: 1.2;
+        gap: 6.25px;
     }
 
     nav {
@@ -1081,7 +1083,7 @@ b {
     }
 
     .s1-c1s {
-        margin-bottom: 12.5px;
+        margin-bottom: 0px;
     }
 
     .s1-c2s {
@@ -1091,14 +1093,14 @@ b {
     }
 
     .s1-c2ss2 {
-        width: 90%;
+        width: 100%;
         align-self: center;
     }
 
     /*section2*/
     :root {
         --swiper-navigation-top-offset: 98%;
-        --swiper-navigation-sides-offset: 38%;
+        --swiper-navigation-sides-offset: 35%;
     }
 
     #Amenities {
@@ -1142,7 +1144,7 @@ b {
     }
 
     .s3-c2 {
-        width: 60%;
+        width: 70%;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(6, 1fr);
     }
@@ -1213,7 +1215,7 @@ b {
     }
 
     /*section 6*/
-    .s6-c2{
+    .s6-c2 {
         width: 100px;
     }
 
@@ -1227,7 +1229,7 @@ b {
         align-items: center;
     }
 
-    input{
+    input {
         border-bottom: 1px solid white;
     }
 
