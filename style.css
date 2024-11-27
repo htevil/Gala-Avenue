@@ -759,6 +759,14 @@ b {
     }
 
     /*section2*/
+    .s2-c2s{
+        padding-bottom: 5px;
+    }
+
+    .s2-c2ss{
+        margin-bottom: 0px;
+    }
+
     .swiper-slide span {
         font-size: 14px;
         line-height: 1;
@@ -1121,7 +1129,7 @@ b {
     }
 
     .s2-c2 {
-        width: 75%;
+        width: 90%;
     }
 
     .swiper-slide {
@@ -1255,4 +1263,10 @@ b {
         text-align: center;
     }
 
+}
+
+@media (max-width: 450px) {
+    .s2-c2 {
+        width: 75%;
+    }
 }
